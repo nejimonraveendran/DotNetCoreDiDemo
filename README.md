@@ -48,6 +48,17 @@ In the *FirstRunner* class, we set the value of MyModel through the FirstService
 
 In the *SecondRunner* class, we again read the value of MyModel through the *SecondService*
 
+```csharp
+ public void Run()
+  {
+      //if you use .AddTransient<IMyModel, MyModel>(), you can see that a separate instance of MyModel class is injected into FirstService and SecondService, thus the val1 and val2 are different.
+      //if you use .AddScoped<IMyModel, MyModel>(), you can see that the same instance of MyModel class is injected into FirstService and SecondService, thus the val1 and val2 are the same.
+
+      var curVal = _secondService.GetCurrentValue();
+      Console.WriteLine($"Value read back within scope2 is  {curVal}");
+  }
+```
+
 ## Results
 Try changing the following line in *Program.cs* from *AddScoped* to *AddTransient*, and then to *AddSingleton* and observe the change in behavior of FirstRunner and SecondRunner classes.
 
