@@ -5,12 +5,12 @@ using System.Text;
 
 namespace DiScopeDemo
 {
-    class Runner : IRunner
+    class SecondRunner : IRunner
     {
         IFirstService _firstService;
         ISecondService _secondService;
 
-        public Runner(IFirstService firstService, ISecondService secondService)
+        public SecondRunner(IFirstService firstService, ISecondService secondService)
         {
             _firstService = firstService;
             _secondService = secondService;
@@ -22,10 +22,8 @@ namespace DiScopeDemo
             //if you use .AddTransient<IMyModel, MyModel>(), you can see that a separate instance of MyModel class is injected into FirstService and SecondService, thus the val1 and val2 are different.
             //if you use .AddScoped<IMyModel, MyModel>(), you can see that the same instance of MyModel class is injected into FirstService and SecondService, thus the val1 and val2 are the same.
 
-
-            var val1 = _firstService.SetValue(10);
-            var val2 = _secondService.GetCurrentValue();
-
+            var curVal = _secondService.GetCurrentValue();
+            Console.WriteLine($"Value read back within scope2 is  {curVal}");
         }
     }
 }

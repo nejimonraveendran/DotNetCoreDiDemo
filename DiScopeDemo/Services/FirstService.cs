@@ -19,5 +19,6 @@ namespace DiScopeDemo.Services
             _myModel.MyModelValue = value;
             return _myModel.MyModelValue;
         }
+
     }
 }
