@@ -84,7 +84,7 @@ There will be completely separate instances of MyModel at each place it is injec
 ![image](https://user-images.githubusercontent.com/68135957/224890402-51939810-2668-42ad-8bb6-4858f0ffeff4.png)
 
 ## Why Scoping is Important
-It is very important a developer use the correct DI scoping in an application.  An incorrect use can lead to unexpected application behavior and performance problems.  For example, if you are using a Singleton class for data access and you are using a variable for holding database results, chances are that one request overwrites the results retrieved by another request leading to presenting incorrect data to the user.    
+It is very important a developer use the correct DI scoping in an application.  An incorrect use can lead to unexpected application behavior and performance problems.  For example, if you are using a Singleton class for data access and you are using a variable for holding database results, chances are that one request overwrites the results retrieved by another request, leading to presenting incorrect data to the user.    
 
 
 
