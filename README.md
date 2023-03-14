@@ -1,3 +1,5 @@
+<img src="https://api.visitorbadge.io/api/visitors?path=nejimon.raveendran-dotnetcoredidemo&countColor=%234a748a&style=flat"></img>
+
 # Nuances of .NET Core Dependency Injection
 #### Discusses AddScoped / AddTransient / AddSingleton
 ##
